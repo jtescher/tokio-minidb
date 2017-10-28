@@ -1,0 +1,6 @@
+[package]
+name = "tokio-minidb"
+version = "0.1.0"
+authors = ["Julian Tescher <jatescher@gmail.com>"]
+
+[dependencies]
