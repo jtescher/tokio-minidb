@@ -13,6 +13,7 @@ use std::sync::{Arc, Mutex};
 pub mod server;
 mod storage;
 pub use storage::in_memory_db::InMemoryDB;
+pub use storage::persistent_db::PersistentDB;
 
 // Simple key value database interface
 pub trait DB: Sized {

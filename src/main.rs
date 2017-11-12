@@ -2,7 +2,7 @@ extern crate num_cpus;
 extern crate tokio_minidb;
 extern crate tokio_proto;
 
-use tokio_minidb::{InMemoryDB, DB};
+use tokio_minidb::{PersistentDB, DB};
 use tokio_minidb::server::{LineProto, Server};
 use tokio_proto::TcpServer;
 
@@ -11,7 +11,7 @@ fn main() {
     let addr = "0.0.0.0:12345".parse().unwrap();
 
     // Instantiate DB
-    let db_handle = InMemoryDB::new().unwrap().handle();
+    let db_handle = PersistentDB::new().unwrap().handle();
 
     println!("Listening on port 12345");
 
